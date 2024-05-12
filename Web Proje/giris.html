@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Sayfası</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right top, #a2d149, #f5f5dc);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffd700;
+            padding: 20px;
+            text-align: center;
+            color: #006400;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 140px); /* Ekran yüksekliğinin 140 pikseli hariç alana yerleştir */
+        }
+        form {
+            max-width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 16px);
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #006400;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d00;
+        }
+    </style>
+</head>
+<body>
+    
+
+<header>
+    <h1>Giriş Sayfası</h1>
+</header>
+
+<main>
+    <form>
+        <form action="login.php" method="post">
+
+        <input type="text" name="username" placeholder="Kullanıcı Adı" required>
+        <input type="password" name="password" placeholder="Şifre" required>
+        <input type="submit" value="Giriş Yap">
+    </form>
+
+    
+</main>
+
+
+
+</body>
+</html>
