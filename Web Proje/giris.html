@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giriş Sayfası</title>
+    <title>Adıyaman - Giriş Sayfası</title>
+    
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right top, #a2d149, #f5f5dc);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
         }
@@ -19,37 +20,82 @@
         }
         h1 {
             margin: 0;
+            font-size: 36px;
         }
         main {
             padding: 20px;
             color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: calc(100vh - 140px); /* Ekran yüksekliğinin 140 pikseli hariç alana yerleştir */
+            background: linear-gradient(to right top, #a2d149, #f5f5dc);
+            min-height: 100vh;
+        }
+        footer {
+            background-color: #006400;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #006400;
+        }
+        p {
+            margin-bottom: 16px;
+            line-height: 1.6;
         }
         form {
             max-width: 300px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz */
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
         }
         input[type="text"],
         input[type="password"] {
-            width: calc(100% - 16px);
-            margin-bottom: 10px;
-            padding: 8px;
+            width: calc(100% - 22px); /* Kenar boşlukları göz ardı eder */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
             border: 1px solid #ccc;
-            border-radius: 4px;
         }
         input[type="submit"] {
-            width: 100%;
-            padding: 10px;
             background-color: #006400;
             color: #fff;
+            padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
         input[type="submit"]:hover {
@@ -59,24 +105,67 @@
 </head>
 <body>
     
-
-<header>
-    <h1>Giriş Sayfası</h1>
-</header>
-
-<main>
-    <form>
-        <form action="login.php" method="post">
-
-        <input type="text" name="username" placeholder="Kullanıcı Adı" required>
-        <input type="password" name="password" placeholder="Şifre" required>
-        <input type="submit" value="Giriş Yap">
-    </form>
-
+    <header>
+        <h1>Adıyaman</h1>
+        <p>Tarihi, Mutfağı ve Kültürü</p>
+    </header>
     
-</main>
+    <nav>
+        <a href="main.html"          id="hakkindaLink">Hakkında </a>
+        <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
+        <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
+        <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
+        <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
+        <a href="iletisim.html"      id="iletisimLink">İletişim</a>
+        <a href="giris.html"         id="girisLink">Giriş</a>
+    </nav>
 
+    <main>
+        <form action="#" method="post">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required><br>
+            
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required><br>
+            
+            <input type="submit" value="Giriş Yap">
+        </form>
+    </main>
 
+  
+
+    <script>
+        document.getElementById('anasayfaLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'main.html';
+           });
+       
+       
+           document.getElementById('hakkindaLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'hakkinda.html';
+           });
+       
+           document.getElementById('ozgecmisLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'ozgecmis.html';
+           });
+       
+           document.getElementById('sehrimizLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'sehrimiz.html';
+           });
+       
+           document.getElementById('iletisimLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'iletisim.html';
+           });
+       
+           document.getElementById('girisLink').addEventListener('click', function(event) {
+               event.preventDefault();
+               window.location.href = 'giris.html';
+           });
+       </script>
 
 </body>
 </html>

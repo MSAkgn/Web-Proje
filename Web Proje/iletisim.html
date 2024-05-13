@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman - İletişim</title>
+    
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -67,6 +68,46 @@
             margin-bottom: 16px;
             line-height: 1.6;
         }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            height: 150px;
+        }
+        input[type="submit"] {
+            background-color: #006400;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #004d00;
+        }
+        .success-message {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
@@ -77,20 +118,48 @@
 </header>
 
 <nav>
-    <a href="main.html"     id="anasayfaLink">Anasayfa </a>
-    <a href="hakkinda.html" id="hakkindaLink">Hakkında</a>
-    <a href="ozgecmis.html" id="ozgecmisLink">Özgeçmiş</a>
-    <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
-    <a href="iletisim.html" id="iletisimLink">İletişim</a>
-    <a href="giris.html" id="girisLink">Giriş</a>
+    <a href="main.html"          id="hakkindaLink">Hakkında </a>
+    <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
+    <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
+    <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
+    <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
+    <a href="iletisim.html"      id="iletisimLink">İletişim</a>
+    <a href="giris.html"         id="girisLink">Giriş</a>
 </nav>
 
 <main>
-    <h2 id="iletisim">İletişim</h2>
-    <p>İletişim bilgileri buraya gelecek.</p>
+    <h2 id="iletisim">İletişim</h2>    
+    
+    <form action="#" method="post">
+        <label for="name">Ad Soyad:</label>
+        <input type="text" id="name" name="name" required><br>
+        
+        <label for="email">E-posta Adresi:</label>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="message">Mesaj:</label>
+        <textarea id="message" name="message" rows="5" required></textarea><br>
+        
+        <input type="submit" value="Gönder">
+    </form>
+    
+    <div class="success-message" id="successMessage" style="display: none;">
+        Mesajınız başarıyla gönderildi!
+    </div>
 </main>
 
 
+
+<script>
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+        setTimeout(function() {
+            successMessage.style.display = 'none';
+        }, 3000); // 3 seconds
+    });
+</script>
 
 </body>
 </html>
