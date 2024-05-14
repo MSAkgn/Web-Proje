@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adıyaman - Mirasımız</title>
-
     
+    <title>Adıyaman</title>
+
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -71,6 +72,10 @@
             line-height: 1.6;
         }
     </style>
+
+
+
+
 </head>
 <body>
 
@@ -89,19 +94,66 @@
     <a href="giris.html"         id="girisLink">Giriş</a>
 </nav>
 
+
+
+
+
+
 <main>
-    <h2 id="hakkinda">Tarihi Mirasımız</h2>
-    <p>Adıyaman, tarihi zenginliği ile dikkat çeker. Urfa'nın kuzeybatısında yer alır ve tarih boyunca birçok medeniyete ev sahipliği yapmıştır.</p>
-    <p>Adıyaman'ın tarihi eserleri arasında Nemrut Dağı, Perre Antik Kenti ve Karakuş Tümülüsü öne çıkar.</p>
+    <h2 id="hakkinda">Hakkında</h2>
+    <p>Merhaba ben Muhammet Süleyman Akgün.Sakarya Üniversitesi Bilgisayar Mühendisliği 1.sınıf öğrencisiyim.Bu web sitesinde kendimi ve şehrimi tanıtmaya çalışacağım.</p>
+    <p> </p>
+    <p></p>
+
     <div style="display: flex;">
-        <img src="jpg/nemrut.jpg" alt="Adıyaman Tarihi"           style="max-width: 200px; height: 200px;">
-        <img src="jpg/perreantikkenti.jpg" alt="Adıyaman Tarihi"  style="max-width: 200px; height: 200px;">
-        <img src="jpg/karakus-tumulusu.jpg" alt="Adıyaman Tarihi" style="max-width: 200px; height: 200px;">
-    
+        <img src="jpg/fakülte.jpg" alt="Hakkında"  style="max-width: 200px; height: 200px;">
+        <img src="" alt="Hakkında"          style="max-width: 200px; height: 200px;">
+        <img src="..." alt="Hakkında"          style="max-width: 200px; height: 200px;">
+    </div>
+
+
+
+
 
 </main>
 
+    
 
+
+
+
+<script>
+ document.getElementById('anasayfaLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'index.html';
+    });
+
+
+    document.getElementById('hakkindaLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'hakkinda.html';
+    });
+
+    document.getElementById('ozgecmisLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'ozgecmis.html';
+    });
+
+    document.getElementById('sehrimizLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'sehrimiz.html';
+    });
+
+    document.getElementById('iletisimLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'iletisim.html';
+    });
+
+    document.getElementById('girisLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.location.href = 'giris.html';
+    });
+</script>
 
 </body>
 </html>
