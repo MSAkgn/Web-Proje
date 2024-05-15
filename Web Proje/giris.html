@@ -107,7 +107,7 @@
     
     <header>
         <h1>Adıyaman</h1>
-        <p>Tarihi, Mutfağı ve Kültürü</p>
+        <h4>Tarihi, Mutfağı ve Kültürü</h4>
     </header>
     
     <nav>
@@ -166,6 +166,20 @@
                window.location.href = 'giris.html';
            });
        </script>
+<script>
+    document.getElementById('girisForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Formun varsayılan davranışını engelle
+        
+        // Giriş başarılı olduğunu varsayalım
+        alert("Giriş başarıyla yapıldı");
+        
+        // İsteğe bağlı olarak başarılı giriş sonrası başka bir sayfaya yönlendirebilirsiniz
+        // window.location.href = 'anasayfa.html';
+    });
+</script>
+
+
+
 
 </body>
 </html>
