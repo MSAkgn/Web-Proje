@@ -11,6 +11,7 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+            
         }
         header {
             background-color: #ead304;
@@ -121,7 +122,7 @@
     </nav>
 
     <main>
-        <form action="#" method="post">
+        <form action="giris.php" method="post">
             <label for="username">Kullanıcı Adı:</label>
             <input type="text" id="username" name="username" required><br>
             
@@ -170,11 +171,24 @@
     document.getElementById('girisForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Formun varsayılan davranışını engelle
         
-        // Giriş başarılı olduğunu varsayalım
-        alert("Giriş başarıyla yapıldı");
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
         
-        // İsteğe bağlı olarak başarılı giriş sonrası başka bir sayfaya yönlendirebilirsiniz
-        // window.location.href = 'anasayfa.html';
+        // Ajax ile form verilerini PHP dosyasına gönder
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'giris.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                if (xhr.responseText.includes('Hoşgeldiniz')) {
+                    alert('Giriş başarıyla yapıldı');
+                    window.location.href = 'anasayfa.html';
+                } else {
+                    alert('Giriş başarısız. Lütfen tekrar deneyin.');
+                }
+            }
+        };
+        xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
     });
 </script>
 

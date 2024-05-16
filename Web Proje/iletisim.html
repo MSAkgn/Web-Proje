@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman - İletişim</title>
-    
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+            
         }
         header {
             background-color: #ead304;
@@ -79,7 +79,8 @@
         }
         input[type="text"],
         input[type="email"],
-        textarea {
+        textarea,
+        select {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -89,24 +90,26 @@
         textarea {
             height: 150px;
         }
-        input[type="submit"] {
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
             background-color: #006400;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
-        input[type="submit"]:hover {
+        button:hover {
             background-color: #004d00;
         }
-        .success-message {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-            border-radius: 5px;
-            padding: 10px;
-            margin-top: 20px;
+        .error {
+            color: red;
+            margin-top: -15px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -118,47 +121,121 @@
 </header>
 
 <nav>
-    <a href="index.html"          id="hakkindaLink">Hakkında </a>
-    <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
-    <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
+    <a href="index.html" id="hakkindaLink">Hakkında </a>
+    <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
+    <a href="mirasimiz.html" id="mirasimizLink">Mirasımız</a>
     <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-    <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
-    <a href="iletisim.html"      id="iletisimLink">İletişim</a>
-    <a href="giris.html"         id="girisLink">Giriş</a>
+    <a href="ozgecmis.html" id="ozgecmisLink">Özgeçmiş</a>
+    <a href="iletisim.html" id="iletisimLink">İletişim</a>
+    <a href="giris.html" id="girisLink">Giriş</a>
 </nav>
 
 <main>
     <h2 id="iletisim">İletişim</h2>    
     
-    <form action="#" method="post">
+    <form id="contactForm">
         <label for="name">Ad Soyad:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name"><br>
+        <div id="nameError" class="error"></div>
         
         <label for="email">E-posta Adresi:</label>
-        <input type="email" id="email" name="email" required><br>
+        <input type="email" id="email" name="email"><br>
+        <div id="emailError" class="error"></div>
+        
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone"><br>
+        <br>
+        <div id="phoneError" class="error"></div>
+        
+        <label for="subject">Konu:</label>
+        <select id="subject" name="subject">
+            <option value="">Konu Seçin</option>
+            <option value="soru">Soru</option>
+            <option value="geri bildirim">Geri Bildirim</option>
+            <option value="şikayet">Şikayet</option>
+        </select><br>
+        <div id="subjectError" class="error"></div>
         
         <label for="message">Mesaj:</label>
-        <textarea id="message" name="message" rows="5" required></textarea><br>
+        <textarea id="message" name="message" rows="5"></textarea><br>
+        <div id="messageError" class="error"></div>
         
-        <input type="submit" value="Gönder">
+        <div class="buttons">
+            <button type="button" id="validateButton">Doğrula</button>
+            <button type="button" id="resetButton">Temizle</button>
+            <button type="submit" id="submitButton">Gönder</button>
+        </div>
     </form>
-    
-    <div class="success-message" id="successMessage" style="display: none;">
-        Mesajınız başarıyla gönderildi!
-    </div>
 </main>
 
-
-
 <script>
-    document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var successMessage = document.getElementById('successMessage');
-        successMessage.style.display = 'block';
-        setTimeout(function() {
-            successMessage.style.display = 'none';
-        }, 3000); // 3 seconds
+    document.getElementById('validateButton').addEventListener('click', function() {
+        validateForm();
     });
+
+    document.getElementById('resetButton').addEventListener('click', function() {
+        document.getElementById('contactForm').reset();
+        clearErrors();
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            const formData = new FormData(event.target);
+            const queryString = new URLSearchParams(formData).toString();
+            window.location.href = `alınaniletisimler.html?${queryString}`;
+        }
+    });
+
+    function validateForm() {
+        clearErrors();
+        let isValid = true;
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        if (!name) {
+            isValid = false;
+            document.getElementById('nameError').textContent = 'Ad Soyad gereklidir';
+        }
+        if (!email) {
+            isValid = false;
+            document.getElementById('emailError').textContent = 'E-posta Adresi gereklidir';
+        } else if (!validateEmail(email)) {
+            isValid = false;
+            document.getElementById('emailError').textContent = 'Geçerli bir e-posta adresi girin';
+        }
+        if (!phone) {
+            isValid = false;
+            document.getElementById('phoneError').textContent = 'Telefon gereklidir';
+        }
+        if (!subject) {
+            isValid = false;
+            document.getElementById('subjectError').textContent = 'Konu gereklidir';
+        }
+        if (!message) {
+            isValid = false;
+            document.getElementById('messageError').textContent = 'Mesaj gereklidir';
+        }
+
+        return isValid;
+    }
+
+    function validateEmail(email) {
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()\[\]\\.,;:\s@"]+\.)+[^<>()\[\]\\.,;:\s@"]{2,})$/i;
+        return re.test(email);
+    }
+
+    function clearErrors() {
+        document.getElementById('nameError').textContent = '';
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('phoneError').textContent = '';
+        document.getElementById('subjectError').textContent = '';
+        document.getElementById('messageError').textContent = '';
+    }
 </script>
 
 </body>

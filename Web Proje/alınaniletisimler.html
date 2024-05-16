@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Detayları</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right top, #96e10b, #c2ff65);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ead304;
+            padding: 20px;
+            text-align: center;
+            color: #0a6e01;
+        }
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        main {
+            padding: 20px;
+            color: #333;
+        }
+        footer {
+            background-color: #006400;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+        }
+        .details {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .details p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .details p strong {
+            color: #006400;
+        }
+        .back-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #006400;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            width: fit-content;
+        }
+        .back-button:hover {
+            background-color: #006400;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Adıyaman</h1>
+    <h4>Tarihi, Mutfağı ve Kültürü</h4>
+</header>
+
+<main>
+    <h2 id="iletisim">Gönderilen Form Detayları</h2>    
+    
+    <div class="details">
+        <p><strong>Ad Soyad:</strong> <span id="nameDetail"></span></p>
+        <p><strong>E-posta Adresi:</strong> <span id="emailDetail"></span></p>
+        <p><strong>Telefon:</strong> <span id="phoneDetail"></span></p>
+        <p><strong>Konu:</strong> <span id="subjectDetail"></span></p>
+        <p><strong>Mesaj:</strong> <span id="messageDetail"></span></p>
+    </div>
+    
+    <a href="index.html" class="back-button">Siteye Geri Dön</a>
+</main>
+
+<script>
+    function getQueryParams() {
+        const params = new URLSearchParams(window.location.search);
+        return {
+            name: params.get('name'),
+            email: params.get('email'),
+            phone: params.get('phone'),
+            subject: params.get('subject'),
+            message: params.get('message')
+        };
+    }
+
+    function displayFormDetails() {
+        const details = getQueryParams();
+        document.getElementById('nameDetail').textContent = details.name;
+        document.getElementById('emailDetail').textContent = details.email;
+        document.getElementById('phoneDetail').textContent = details.phone;
+        document.getElementById('subjectDetail').textContent = details.subject;
+        document.getElementById('messageDetail').textContent = details.message;
+    }
+
+    displayFormDetails();
+</script>
+
+</body>
+</html>

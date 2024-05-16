@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Adıyaman</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9y4kt/4Sl/zKGjJU8NCF7wKZLe7ggIL5Tfe3LdAqjpuFwZV4G++KmvOzqFBFzrPP" crossorigin="anonymous">
 
     <style>
         body {
@@ -70,13 +69,20 @@
         p {
             margin-bottom: 16px;
             line-height: 1.6;
-            
+        }
+        /* Slider boyutunu küçültmek için eklenen stil */
+        .carousel {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .carousel-item img {
+            max-height: 200px;
+            object-fit: cover;
+
         }
     </style>
 
-
-
-
+    
 </head>
 <body>
 
@@ -86,49 +92,38 @@
 </header>
 
 <nav>
-    <a href="index.html"          id="hakkindaLink">Hakkında </a>
-    <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
-    <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
+    <a href="index.html" id="hakkindaLink">Hakkında </a>
+    <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
+    <a href="mirasimiz.html" id="mirasimizLink">Mirasımız</a>
     <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-    <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
-    <a href="iletisim.html"      id="iletisimLink">İletişim</a>
-    <a href="giris.html"         id="girisLink">Giriş</a>
+    <a href="ozgecmis.html" id="ozgecmisLink">Özgeçmiş</a>
+    <a href="iletisim.html" id="iletisimLink">İletişim</a>
+    <a href="giris.html" id="girisLink">Giriş</a>
 </nav>
-
-
-
 
 
 
 <main>
     <h2 id="hakkinda">Hakkında</h2>
-    <p>Merhaba ben Muhammet Süleyman Akgün.Sakarya Üniversitesi Bilgisayar Mühendisliği 1.sınıf öğrencisiyim.Bu web sitesinde kendimi ve şehrimi tanıtmaya çalışacağım.</p>
-    <p> </p>
+    <p>Merhaba ben Muhammet Süleyman Akgün. Sakarya Üniversitesi Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Bu web sitesinde kendimi ve şehrimi tanıtmaya çalışacağım.</p>
     <p></p>
-
+    <p></p>
     <div style="display: flex;">
-        <img src="jpg/fakülte.jpg" alt="Hakkında"  style="max-width: 200px; height: 200px;">
-        <img src="" alt="Hakkında"          style="max-width: 200px; height: 200px;">
-        <img src="..." alt="Hakkında"          style="max-width: 200px; height: 200px;">
+        <img src="jpg/fakülte.jpg" alt="Hakkında" style="max-width: 200px; height: 200px;">
+        <img src="" alt="Hakkında" style="max-width: 200px; height: 200px;">
+        <img src="..." alt="Hakkında" style="max-width: 200px; height: 200px;">
     </div>
-
-
-
-
-
 </main>
 
-    
-
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.2/js/bootstrap.min.js"></script>
 
 <script>
- document.getElementById('anasayfaLink').addEventListener('click', function(event) {
+    document.getElementById('anasayfaLink').addEventListener('click', function(event) {
         event.preventDefault();
         window.location.href = 'index.html';
     });
-
 
     document.getElementById('hakkindaLink').addEventListener('click', function(event) {
         event.preventDefault();
@@ -155,27 +150,6 @@
         window.location.href = 'giris.html';
     });
 </script>
-
-
-nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    display: flex; /* Nav elementini bir flex container olarak ayarlıyoruz */
-    justify-content: flex-end; /* İçeriğin sağa hizalanmasını sağlıyoruz */
-}
-
-nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 18px;
-    font-weight: bold;
-    margin-left: auto; /* Giriş butonunu sağa taşımak için */
-}
-
-
 
 </body>
 </html>
