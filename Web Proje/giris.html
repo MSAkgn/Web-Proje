@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman - Giriş Sayfası</title>
-    
+    <!-- Bootstrap CSS Ekleme -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            
         }
         header {
             background-color: #ead304;
@@ -45,12 +45,6 @@
             display: block;
             margin: 0 auto;
         }
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
         nav a {
             color: #fff;
             text-decoration: none;
@@ -73,7 +67,7 @@
         form {
             max-width: 300px;
             margin: 0 auto;
-            background-color: rgba(255, 255, 255, 0.8); /* Şeffaf beyaz */
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -85,7 +79,7 @@
         }
         input[type="text"],
         input[type="password"] {
-            width: calc(100% - 22px); /* Kenar boşlukları göz ardı eder */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
@@ -105,95 +99,56 @@
     </style>
 </head>
 <body>
-    
     <header>
         <h1>Adıyaman</h1>
         <h4>Tarihi, Mutfağı ve Kültürü</h4>
     </header>
-    
-    <nav>
-        <a href="index.html"          id="hakkindaLink">Hakkında </a>
-        <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
-        <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
-        <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-        <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
-        <a href="iletisim.html"      id="iletisimLink">İletişim</a>
-        <a href="giris.html"         id="girisLink">Giriş</a>
-    </nav>
 
+    <nav class="bg-dark text-white p-3 text-center">
+        <a href="index.html" id="hakkindaLink">Hakkında </a>
+        <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
+        <a href="mirasimiz.html" id="mirasimizLink">Mirasımız</a>
+        <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
+        <a href="ozgecmis.html" id="ozgecmisLink">Özgeçmiş</a>
+        <a href="iletisim.html" id="iletisimLink">İletişim</a>
+        <a href="giris.html" id="girisLink">Giriş</a>
+    </nav>
+    
     <main>
         <form action="giris.php" method="post">
             <label for="username">Kullanıcı Adı:</label>
             <input type="text" id="username" name="username" required><br>
-            
             <label for="password">Şifre:</label>
             <input type="password" id="password" name="password" required><br>
-            
             <input type="submit" value="Giriş Yap">
         </form>
     </main>
-
-  
-
+   
+    <!-- Bootstrap JS Ekleme -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        document.getElementById('anasayfaLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'index.html';
-           });
-       
-       
-           document.getElementById('hakkindaLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'hakkinda.html';
-           });
-       
-           document.getElementById('ozgecmisLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'ozgecmis.html';
-           });
-       
-           document.getElementById('sehrimizLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'sehrimiz.html';
-           });
-       
-           document.getElementById('iletisimLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'iletisim.html';
-           });
-       
-           document.getElementById('girisLink').addEventListener('click', function(event) {
-               event.preventDefault();
-               window.location.href = 'giris.html';
-           });
-       </script>
-<script>
-    document.getElementById('girisForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Formun varsayılan davranışını engelle
-        
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        
-        // Ajax ile form verilerini PHP dosyasına gönder
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'giris.php', true);
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                if (xhr.responseText.includes('Hoşgeldiniz')) {
-                    alert('Giriş başarıyla yapıldı');
-                    window.location.href = 'anasayfa.html';
-                } else {
-                    alert('Giriş başarısız. Lütfen tekrar deneyin.');
+        document.getElementById('girisForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Formun varsayılan davranışını engelle
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            // Ajax ile form verilerini PHP dosyasına gönder
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'giris.php', true);
+            xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    if (xhr.responseText.includes('Hoşgeldiniz B231210032')) {
+                        alert('Giriş başarıyla yapıldı');
+                        window.location.href = 'index.html';
+                    } else {
+                        alert('Giriş başarısız. Lütfen tekrar deneyin.');
+                    }
                 }
-            }
-        };
-        xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
-    });
-</script>
-
-
-
-
+            };
+            xhr.send('username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password));
+        });
+    </script>
 </body>
 </html>

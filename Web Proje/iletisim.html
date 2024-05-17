@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman - İletişim</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -120,7 +123,8 @@
     <h4>Tarihi, Mutfağı ve Kültürü</h4>
 </header>
 
-<nav>
+
+    <nav class="bg-dark text-white p-3 text-center">
     <a href="index.html" id="hakkindaLink">Hakkında </a>
     <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
     <a href="mirasimiz.html" id="mirasimizLink">Mirasımız</a>
@@ -143,7 +147,7 @@
         <div id="emailError" class="error"></div>
         
         <label for="phone">Telefon:</label>
-        <input type="tel" id="phone" name="phone"><br>
+        <input type="number" id="phone" name="phone"><br>
         <br>
         <div id="phoneError" class="error"></div>
         
@@ -237,6 +241,8 @@
         document.getElementById('messageError').textContent = '';
     }
 </script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
