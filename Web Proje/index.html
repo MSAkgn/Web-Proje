@@ -1,103 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman</title>
-   
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #ead304;
-            padding: 20px;
-            text-align: center;
-            color: #0a6e01;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        main {
-            padding: 20px;
-            color: #333;
-            background: linear-gradient(to right top, #96e10b, #c2ff65);
-            min-height: 100vh;
-        }
-        footer {
-            background-color: #006400;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #006400;
-        }
-        p {
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" href="indexstyle.css">        
 </head>
 <body>
-    <header>
-        <h1>Adıyaman</h1>
-        <h4>Tarihi, Mutfağı ve Kültürü</h4>
-    </header>
-    
-    <nav class="bg-dark text-white p-3 text-center">
-        <a href="index.html" id="hakkindaLink">Hakkında </a>
-        <a href="sehrimiz.html" id="sehrimizLink">Şehrimiz</a>
-        <a href="mirasimiz.html" id="mirasimizLink">Mirasımız</a>
-        <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-        <a href="ozgecmis.html" id="ozgecmisLink">Özgeçmiş</a>
-        <a href="iletisim.html" id="iletisimLink">İletişim</a>
-        <a href="giris.html" id="girisLink">Giriş</a>
-        
-    </nav>
-    <main>
-        <h2 id="hakkinda">Hakkında</h2>
-<p>Merhaba ben Muhammet Süleyman Akgün. Sakarya Üniversitesi Bilgisayar Mühendisliği 1. sınıf öğrencisiyim. Bu web sitesinde kendimi ve şehrimi tanıtmaya çalışacağım.</p>
-<p></p>
-<p></p>
-<div style="display: flex;">
-    <img src="jpg/fakülte.jpg" alt="Hakkında" style="max-width: 200px; height: 200px;">
-    <img src="" alt="Hakkında" style="max-width: 200px; height: 200px;">
-    <img src="..." alt="Hakkında" style="max-width: 200px; height: 200px;">
-</div>
-    </main>
-    
-    <!-- Bootstrap JS Ekleme -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<header>
+    <h1>Adıyaman</h1>
+    <h4>Tarihi, Mutfağı ve Kültürü</h4>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Adıyaman</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Hakkında</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sehrimiz.html">Şehrimiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ilgialanlarım.html">İlgi Alanlarım</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="giris.html">Giriş</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <div class="card-deck">
+        <div class="card">
+            <img src="jpg/yüzme.jpg" class="card-img-top" alt="Yüzme">
+            <div class="card-body">
+                <h5 class="card-title">Yüzme</h5>
+                <p class="card-text">Yüzme, benim için sadece bir spor değil aynı zamanda bir tutkudur. Genç yaşlarımdan beri suyla iç içe olmayı ve yüzmenin verdiği özgürlüğü hissetmeyi seviyorum. Suyun sakinleştirici etkisi ve vücudumun suyun içindeki hareketiyle uyum içinde olması, beni her zaman heyecanlandırır. Yüzme, fiziksel sağlığımı korumak ve güçlendirmek için harika bir yol olduğu gibi, zihinsel olarak da rahatlamamı sağlar. Yüzme havuzda, denizde veya nehirlerde olsun, her su ortamında kendimi evimde hissediyorum. Yüzme, benim için sadece bir aktivite değil, aynı zamanda bir yaşam tarzıdır.</p>
+                <button class="btn btn-primary" onclick="window.location.href='https://www.tyf.gov.tr/'">Daha Fazla</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="jpg/futbol.jpg" class="card-img-top" alt="Futbol">
+            <div class="card-body">
+                <h5 class="card-title">Futbol</h5>
+                <p class="card-text">Futbol, takım ruhunu ve stratejik düşünmeyi teşvik eden bir spordur. Çocukluğumdan beri futbol oynamayı ve izlemeyi seviyorum. Futbol, fiziksel kondisyonumu korumamın yanı sıra, bana disiplini ve işbirliğini de öğretir. Yeşil sahada koşarken hissettiğim adrenalin ve gol atmanın verdiği heyecan, futbolu benim için vazgeçilmez kılar. Futbol, benim için sadece bir spor değil, aynı zamanda bir yaşam biçimidir.</p>
+                <button class="btn btn-primary" onclick="window.location.href='https://www.transfermarkt.com.tr/'">Daha Fazla</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="jpg/satranc.jpg" class="card-img-top" alt="Satranç">
+            <div class="card-body">
+                <h5 class="card-title">Satranç</h5>
+                <p class="card-text">Satranç, benim için sadece bir oyun değil, bir strateji ve zihinsel derinliklerin keşfi yolculuğudur. Her hamlede, düşünce gücümü ve problem çözme yeteneklerimi geliştirmenin keyfini yaşarım. Satranç, konsantrasyonumu artırır, sabrımı güçlendirir ve beni daha iyi bir karar verici yapar. Her taşın arkasında yatan bir plan ve her hamlenin bir sonucu vardır. Satranç tahtası, benim için sadece bir oyun alanı değil, aynı zamanda hayatın bir yansımasıdır. Her oyun, öğrenme ve büyüme fırsatı sunar, ve her maç, beni daha iyi bir versiyonum haline getirir.</p>
+                <button class="btn btn-primary" onclick="window.location.href='https://www.chess.com/news'">Daha Fazla</button>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

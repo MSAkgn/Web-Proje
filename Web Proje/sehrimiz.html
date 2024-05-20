@@ -4,75 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adıyaman - Şehrimiz</title>
-
+    <link href="sehrimizstyle.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            
-        }
-        header {
-            background-color: #ead304;
-            padding: 20px;
-            text-align: center;
-            color: #0a6e01;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        main {
-            padding: 20px;
-            color: #333;
-            background: linear-gradient(to right top, #96e10b, #c2ff65);
-            min-height: 100vh;
-        }
-        footer {
-            background-color: #006400;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #006400;
-        }
-        p {
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-    </style>
+
 </head>
 <body>
 
@@ -81,50 +16,159 @@
     <h4>Tarihi, Mutfağı ve Kültürü</h4>
 </header>
 
-
-    <nav class="bg-dark text-white p-3 text-center">
-    <a href="index.html"          id="hakkindaLink">Hakkında </a>
-    <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
-    <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
-    <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-    <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
-    <a href="iletisim.html"      id="iletisimLink">İletişim</a>
-    <a href="giris.html"         id="girisLink">Giriş</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Adıyaman</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Hakkında</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sehrimiz.html">Şehrimiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ilgialanlarım.html">İlgi Alanlarım</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="giris.html">Giriş</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <main>
-    <h2 id="sehrimiz">Mutfağımız</h2>
-    <p>Güneydoğu Anadolu'nun lezzet deryası Adıyaman mutfağı, tarihi ve kültürel mirasıyla damaklarda unutulmaz izler bırakır. Bereketli toprakların sunduğu taze ürünlerle hazırlanan yöresel yemekler, geleneksel yöntemlerle pişirilir ve özenle sunulur. İşte, Adıyaman mutfağının eşsiz lezzetlerinden bazıları:
 
-        1. Kuzu Tandırı:
-        Adıyaman mutfağının en ünlü lezzetlerinden biri olan kuzu tandırı, uzun saatler boyunca odun ateşinde pişirilerek hazırlanır. Taze kuzu eti, özel baharatlarla marine edilir ve ardından tandırda pişirilir. Sonuç, dışı çıtır çıtır, içi ise yumuşacık olan nefis bir lezzettir. Kuzu tandırı, Adıyaman sofralarının vazgeçilmezidir.
-        
-        2. Çiğ Köfte:
-        Adıyaman'da çiğ köfte, yöresel olarak çok sevilen bir atıştırmalık ve ana yemek olarak tüketilir. Bulgur, isot biberi, soğan, salça ve baharatlarla hazırlanan çiğ köfte harcı, limon ve marul ile servis edilir. Özellikle pikniklerde ve özel günlerde sıkça tercih edilen çiğ köfte, acı sevenler için de vazgeçilmez bir seçenektir.
-        
-        3. İçli Köfte:
-        Adıyaman mutfağının en sevilen mezelerinden biri olan içli köfte, bulgurun içine kıyma,soğan ve baharatlarla hazırlanan iç harcın sarılmasıyla yapılır. Daha sonra kızgın yağda kızartılan içli köfteler, çıtır dış kabuğuyla ve lezzetli iç harcıyla enfes bir tat sunar.
-        
-        4. Lahmacun:
-        Adıyaman'da geleneksel olarak yapılan lahmacunlar, ince hamurun üzerine kıymalı, baharatlı ve domatesli harcın yayılmasıyla hazırlanır. Ardından fırında pişirilen lahmacunlar, taze maydanoz, limon ve salatalıkla servis edilir. Lahmacun, Adıyamanlıların kahvaltı ve öğle yemeği sofralarının vazgeçilmez bir parçasıdır.
-        
-        Adıyaman mutfağı, taze ve doğal malzemelerin ustalıkla kullanılmasıyla kendine özgü bir lezzet dünyası sunar. Yöresel yemekler, geleneksel yöntemlerle hazırlanır ve Adıyamanlıların sofralarında özel bir yere sahiptir. Bu lezzet yolculuğunda, Adıyaman mutfağının eşsiz tatlarını denemek için şehri ziyaret etmek şarttır.
-        
-        
-        
-        
-        
-        </p>
-    <img src="jpg/adiyaman-da-ne-yenir.jpg" alt="Adıyaman Mutfağı" style="max-width: 100%; height: 200px;">
+  <!-- Slider -->
+  <div id="slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#slider" data-slide-to="0" class="active"></li>
+        <li data-target="#slider" data-slide-to="1"></li>
+        <li data-target="#slider" data-slide-to="2"></li>
+        <li data-target="#slider" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <a href="mirasimiz.html">
+           <img src="jpg/nemrut.jpg" class="d-block w-100" alt="Gezilecek Yer 1"></a>
+            <div class="carousel-caption">
+                <h5>Nemrut Dağı</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#atatürk-baraji">
+                <img src="jpg/atatürkbarajı.jpg" class="d-block w-100" alt="Gezilecek Yer 2"></a>
+            <div class="carousel-caption">
+                <h5>Atatürk Barajı</h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="mirasimiz.html">
+            <img src="jpg/arsemia.jpg" class="d-block w-100" alt="Gezilecek Yer 3"></a>
+            <div class="carousel-caption">
+                <h5>Arsemia Antik Kenti </h5>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#deprem">
+                <img src="jpg/deprem.jpg" class="d-block w-100" alt="Gezilecek Yer 4"></a>
+            <div class="carousel-caption">
+                <h5>Deprem</h5>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+  </div>
 
-    <h2 id="sehrimiz">Kültürümüz</h2>
-    <p>Güneydoğu Anadolu'nun mistik atmosferiyle buluşan, tarihi ve kültürel zenginlikleriyle göz kamaştıran bir şehir: Adıyaman. Fırat Nehri'nin kıyısında, tarihi İpek Yolu güzergahında yer alan bu şehir, binlerce yıllık geçmişiyle adeta bir açık hava müzesi gibidir. Adıyaman, tarih boyunca birçok medeniyete ev sahipliği yapmış ve bu medeniyetlerin izlerini taşıyan eşsiz bir kültürel mirasa sahiptir..Adıyaman'ın kültürel dokusu, binlerce yıllık tarihinin bir yansımasıdır. Şehirde düzenlenen festivaller, özellikle Bahar Şenlikleri ve Yaz Etkinlikleri, yerel kültürün renkli ve coşkulu bir şekilde kutlandığı etkinliklerdir.</p>
-    <img src="jpg/yöreselkıyafet.jpg" alt="Adıyaman Kültürü" style="max-width: 100%; height: 200px;">
+   <!-- İlk satır kartlar -->
+   <div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2>Mutfağımız</h2>
+                <p>Güneydoğu Anadolu'nun lezzet deryası Adıyaman mutfağı, tarihi ve kültürel mirasıyla damaklarda unutulmaz izler bırakır. Bereketli toprakların sunduğu taze ürünlerle hazırlanan yöresel yemekler, geleneksel yöntemlerle pişirilir ve özenle sunulur. İşte, Adıyaman mutfağının eşsiz lezzetlerinden bazıları:</p>
+      <!-- Yemek Listesi -->
+      <ul>
+          <li>Kuzu Tandırı: Adıyaman mutfağının en ünlü lezzetlerinden biri.</li>
+          <li>Çiğ Köfte: Adıyaman'da çiğ köfte, yöresel olarak çok sevilen bir atıştırmalık ve ana yemek olarak tüketilir.</li>
+          <li>İçli Köfte: Adıyaman mutfağının en sevilen mezelerinden biri.</li>
+          <li>Lahmacun: Adıyaman'da geleneksel olarak yapılan lahmacunlar.</li>
+      </ul>
+      <img src="jpg/adiyaman-da-ne-yenir.jpg" alt="Adıyaman Mutfağı" height="400px"  width="400px">
+      <p class="image-caption">Adıyaman Mutfağından Lezzetler</p>
 
-    <h2 id="sehrimiz">Yüzyılın Felaketi</h2>
-    <p>6 şubat 2023'te saat 04.17 meydana gelen 7.8'lik ilk deprem ile çok büyük zarar gören şehrimiz 2.darbeye saat 13.24'te meydana gelen 7.5'lik ikinci depremde aldı.Bu depremler çok büyük yıkama ve kayıba sebep oldu.Hem sevdiklerimizi hem de memleketimizi kaybetmiştik.Neye üzüleceğimize şaşırmıştık.Doğup büyüdüğümüz bir sürü anılarımızın olduğu memleketimizi kaybettiğimize mi üzülecektik yoksa o anıları beraber yaşadığımız sevdiklerimizi kaybettiğimize mi üzülecektik.Bir yandan da bu depremler bizimle beraber 10 şehri daha yerle bir etmişti.Bundan dolayı yardımlar bir hayli geç ulaştı ve bu da kayıpları daha da arttırdı.Hepsine tamam ama depremin ilk zamanlarında yayınlanan haberlerin hiç birinde Adıyaman'ın adının dahi geçmemesi işte bu hepsinden daha kötüydü. </p>
-    <img src="jpg/deprem.jpg" alt="Adıyaman Kültürü" style="max-width: 100%; height: 200px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2>Kültürümüz</h2>
+                <p>Güneydoğu Anadolu'nun mistik atmosferiyle buluşan, tarihi ve kültürel zenginlikleriyle göz kamaştıran bir şehir: Adıyaman.</p>
+      <p>Fırat Nehri'nin kıyısında, tarihi İpek Yolu güzergahında yer alan bu şehir, binlerce yıllık geçmişiyle adeta bir açık hava müzesi gibidir. Adıyaman, tarih boyunca birçok medeniyete ev sahipliği yapmış ve bu medeniyetlerin izlerini taşıyan eşsiz bir kültürel mirasa sahiptir. Adıyaman'ın kültürel dokusu, binlerce yıllık tarihinin bir yansımasıdır. Şehirde düzenlenen festivaller, özellikle Bahar Şenlikleri ve Yaz Etkinlikleri, yerel kültürün renkli ve coşkulu bir şekilde kutlandığı etkinliklerdir.</p>
+<img src="jpg/yöreselkıyafet.jpg" alt="Adıyaman Kültürü" height="500px"  width="500px">
+<p class="image-caption">Adıyaman Kültüründen Görüntüler</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--İkinci Satır-->
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2>Yüzyılın Felaketi</h2>
+<div id="deprem"></div>
+<p>6 Şubat 2023'te saat 04.17'de meydana gelen 7.8 büyüklüğündeki deprem, Adıyaman ve çevresinde korkunç bir felakete sebep oldu. Yüzlerce insan hayatını kaybetti ve binlerce kişi yaralandı. Deprem, şehirdeki altyapıyı ve binaları ciddi şekilde hasara uğrattı, birçok ev yıkıldı ve birçoğu kullanılamaz hale geldi. Ardından gelen 7.5 büyüklüğündeki ikinci deprem, zaten yaralı olan şehri daha da derinden sarsarak acıyı artırdı.
+
+    Bu felaket, sadece maddi zararla kalmadı, aynı zamanda insanların hayatlarını kökten etkiledi. Birçok aile, sevdiklerini ve yaşamlarını kaybetmenin acısını yaşadı. Ancak, bu zor zamanlarda Adıyaman halkı gösterdiği dayanışma ve yardımlaşma ruhuyla dikkat çekti. Komşular arasında yardımlaşma, kurtarma ekipleri ve gönüllüler tarafından ortak bir çaba sergilendi. Bu zorlu süreçte, şehir yeniden ayağa kalkma çabasıyla birleşti ve yıkımın üstesinden gelmeye başladı.</p>
+<img src="jpg/deprem.jpg" alt="Adıyaman Depremi" height="400px"  width="400px">
+  <p class="image-caption">Adıyaman Depreminden Görüntüler</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h2>Şehrimiz Hakkında Bilgiler</h2>
+                <div id="atatürk-baraji">
+                  <p>Adıyaman, Türkiye'nin Güneydoğu Anadolu Bölgesi'nde bulunan tarihi ve doğal güzellikleriyle ünlü bir şehirdir. Yaklaşık 650.000 nüfusa sahiptir. Şehirdeki önemli turistik yerler arasında Nemrut Dağı, Atatürk Barajı ve Perre Antik Kenti bulunur. </p>
+              <p>Atatürk Barajı, Türkiye'nin ve Avrupa'nın en büyük barajı olup, Fırat Nehri üzerinde yer alır. Adıyaman il sınırları içinde bulunan bu devasa baraj, hem enerji üretimi hem de sulama amacıyla inşa edilmiştir. Baraj, 1984 yılında tamamlanmış olup, 84 milyar m³ su depolama kapasitesine sahiptir.
+
+                Atatürk Barajı, Türkiye'nin tarım alanlarını sulamak ve enerji ihtiyacını karşılamak amacıyla büyük öneme sahiptir. Ayrıca barajın oluşturduğu göl, bölgenin doğal güzelliklerinden biri olarak kabul edilir ve piknik, doğa turizmi ve su sporları için popüler bir destinasyondur.</p>
+                  <img src="jpg/atatürkbarajı.jpg" alt="Adıyaman Kültürü" height="415px"  width="415px">
+              <p class="image-caption">Adıyaman İle Alakalı Görseller</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+                  
+                  
+                    
 </main>
+
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -132,3 +176,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
+

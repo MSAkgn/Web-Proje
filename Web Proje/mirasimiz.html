@@ -6,73 +6,8 @@
     <title>Adıyaman - Mirasımız</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            
-        }
-        header {
-            background-color: #ead304;
-            padding: 20px;
-            text-align: center;
-            color: #0a6e01;
-        }
-        h1 {
-            margin: 0;
-            font-size: 36px;
-        }
-        main {
-            padding: 20px;
-            color: #333;
-            background: linear-gradient(to right top, #96e10b, #c2ff65);
-            min-height: 100vh;
-        }
-        footer {
-            background-color: #006400;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        nav {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 18px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            font-size: 24px;
-            margin-top: 20px;
-            color: #006400;
-        }
-        p {
-            margin-bottom: 16px;
-            line-height: 1.6;
-        }
-    </style>
+<link rel="stylesheet" href="mirasimizstyle.css">
+   
 </head>
 <body>
 
@@ -81,28 +16,66 @@
     <h4>Tarihi, Mutfağı ve Kültürü</h4>
 </header>
 
-    <nav class="bg-dark text-white p-3 text-center">
-    <a href="index.html"          id="hakkindaLink">Hakkında </a>
-    <a href="sehrimiz.html"      id="sehrimizLink">Şehrimiz</a>
-    <a href="mirasimiz.html"      id="mirasimizLink">Mirasımız</a>
-    <a href="ilgialanlarım.html" id="ilgiAlanlarımLink">İlgi Alanlarım</a>
-    <a href="ozgecmis.html"      id="ozgecmisLink">Özgeçmiş</a>
-    <a href="iletisim.html"      id="iletisimLink">İletişim</a>
-    <a href="giris.html"         id="girisLink">Giriş</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Adıyaman</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Hakkında</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="sehrimiz.html">Şehrimiz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mirasimiz.html">Mirasımız</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ilgialanlarım.html">İlgi Alanlarım</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ozgecmis.html">Özgeçmiş</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="iletisim.html">İletişim</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="giris.html">Giriş</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 
 <main>
-    <h2 id="hakkinda">Tarihi Mirasımız</h2>
-    <p>Adıyaman, tarihi zenginliği ile dikkat çeker. Urfa'nın kuzeybatısında yer alır ve tarih boyunca birçok medeniyete ev sahipliği yapmıştır.</p>
-    <p>Adıyaman'ın tarihi eserleri arasında Nemrut Dağı, Perre Antik Kenti ve Karakuş Tümülüsü öne çıkar.</p>
-    <div style="display: flex;">
-        <img src="jpg/nemrut.jpg" alt="Adıyaman Tarihi"           style="max-width: 200px; height: 200px;">
-        <img src="jpg/perreantikkenti.jpg" alt="Adıyaman Tarihi"  style="max-width: 200px; height: 200px;">
-        <img src="jpg/karakus-tumulusu.jpg" alt="Adıyaman Tarihi" style="max-width: 200px; height: 200px;">
-    
+    <h2 id="mirasimiz">Tarihi Mirasımız</h2>
+    <div class="card-deck">
+        <div class="card">
+            <img class="card-img-top" src="jpg/nemrut.jpg" alt="Nemrut Dağı">
+            <div class="card-body">
+                <h5 class="card-title">Nemrut Dağı</h5>
+                <p class="card-text">Nemrut Dağı, Adıyaman ilinde bulunan ve UNESCO Dünya Mirası Listesi'nde yer alan tarihi bir yerdir. 2,150 metre yüksekliğindeki bu dağ, Kommagene Kralı I. Antiochos tarafından inşa edilen devasa heykeller ve anıtsal mezar kompleksi ile ünlüdür. Tepede yer alan devasa heykeller ve kral mezarı, hem tarihi hem de arkeolojik açıdan büyük bir öneme sahiptir. Gün doğumu ve gün batımında eşsiz manzaralar sunan Nemrut Dağı, ziyaretçilerine tarih ve doğanın birleştiği büyüleyici bir deneyim sunar.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="jpg/perreantikkenti.jpg" alt="Perre Antik Kenti">
+            <div class="card-body">
+                <h5 class="card-title">Perre Antik Kenti</h5>
+                <p class="card-text">Perre Antik Kenti, Adıyaman ilinde bulunan tarihi bir yerleşim alanıdır. Kommagene Krallığı döneminde önemli bir merkez olan Perre, Roma İmparatorluğu döneminde de önemini korumuştur. Kent, kaya mezarları ve mozaikleriyle ünlüdür. Antik su yolları ve tapınak kalıntıları, ziyaretçilere tarihin derinliklerine yolculuk yapma imkânı sunar. Perre, tarih ve arkeoloji meraklıları için büyüleyici bir destinasyondur.</p>
+            </div>
 
+
+</div>
+<div class="card">
+    <img class="card-img-top" src="jpg/arsemia.jpg" alt="Arsemia Antik Kenti">
+    <div class="card-body">
+        <h5 class="card-title">Arsemia Antik Kenti</h5>
+        <p class="card-text">Arsemia Antik Kenti, Adıyaman ilinde, Kahta ilçesi yakınlarında yer alan tarihi bir yerleşimdir. Kommagene Krallığı'nın yazlık başkenti olarak bilinen Arsemia, MÖ 2. yüzyılda inşa edilmiştir. Kent, Kral Antiochos'un babası Mithridates Callinicus tarafından kurulmuştur ve bu nedenle önemli bir tarihi ve kültürel mirasa sahiptir. Arsemia'da, Kommagene krallarına ait anıtsal mezarlar, devasa kabartmalar ve su tünelleri bulunmaktadır. Özellikle, Antiochos'un tanrılarla tokalaşmasını tasvir eden kabartma, antik kentin en dikkat çekici eserlerinden biridir. Arsemia, tarih ve arkeoloji meraklıları için büyüleyici bir destinasyondur.</p>
+    </div>
+</div>
+</div>
 </main>
-
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
